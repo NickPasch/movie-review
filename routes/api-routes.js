@@ -1,6 +1,7 @@
 // Requiring our models and passport as we've configured it
 const db = require("../models");
 const passport = require("../config/passport");
+var axios = require("axios");
 
 module.exports = function (app) {
   // Using the passport.authenticate middleware with our local strategy.
@@ -46,4 +47,11 @@ module.exports = function (app) {
       });
     }
   });
+  app.get("/api/movie_search/:search", function (req, res) {
+    console.log(req.params.search)
+    const searchMovie = req.params.search;
+    axios.get(`http://www.omdbapi.com/?t=${searchMovie}&apikey=`).then(movieData => {
+      res.json(movieData.data);
+    }).catch(err => console.log(err))
+  })
 };
