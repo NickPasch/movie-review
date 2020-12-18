@@ -1,9 +1,9 @@
 {
   "development": {
     "username": "root",
-    "password": "password",
+    "password": "nC3NAy.C$uK^#!p",
     "database": "movie_review",
-    "host": "17.0.0.1",
+    "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "test": {
