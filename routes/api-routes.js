@@ -1,6 +1,8 @@
 // Requiring our models and passport as we've configured it
-const db = require("../models");
-const passport = require("../config/passport");
+var db = require("../models");
+var passport = require("../config/passport");
+var axios = require("axios");
+require('dotenv').config();
 
 module.exports = function (app) {
   // Using the passport.authenticate middleware with our local strategy.
@@ -16,7 +18,7 @@ module.exports = function (app) {
   app.post("/api/signup", function (req, res) {
     db.User.create({
       email: req.body.email,
-      password: req.body.password,
+      password: req.body.password
     })
       .then(function () {
         res.redirect(307, "/api/login");
@@ -42,8 +44,22 @@ module.exports = function (app) {
       // Sending back a password, even a hashed password, isn't a good idea
       res.json({
         email: req.user.email,
-        id: req.user.id,
+        id: req.user.id
       });
     }
   });
+
+  app.get("/api/movie_search/:search", function (req, res) {
+    console.log(req.params.search)
+    const searchMovie = req.params.search;
+  
+      axios.get("http://www.omdbapi.com/?t=" + searchMovie + "&apikey=" + process.env.api_key).then(movieData => {
+        console.log(movieData);
+        const data = { hello: "hello" };
+        //res.json(data);
+         res.json(movieData.data);
+      }).catch(err => console.log(err))
+  })
 };
+
+
