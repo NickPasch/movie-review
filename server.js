@@ -29,8 +29,47 @@ app.use(passport.session());
 // Requiring our routes
 require("./routes/html-routes.js")(app);
 require("./routes/api-routes.js")(app);
+var icecream = {
+  
+}
 
 // Syncing our database and logging a message to the user upon success
+// // handlebars 
+// ********
+
+// Data
+var icecreams = [
+  { name: "vanilla", price: 10, awesomeness: 3 },
+  { name: "chocolate", price: 4, awesomeness: 8 },
+  { name: "banana", price: 1, awesomeness: 1 },
+  { name: "green tea", price: 5, awesomeness: 7 },
+  { name: "jawbreakers", price: 6, awesomeness: 2 },
+  { name: "pistachio", price: 11, awesomeness: 15 }
+];
+
+// Routes
+app.get("/icecreams/:name", function(req, res) {
+
+  let foundIcecream = icecreams.filter(icecream => icecream.name === req.params.name)
+  res.render("icecream", foundIcecream[0])
+  // for (var i = 0; i < icecreams.length; i++) {
+  //   if (icecreams[i].name === req.params.name) {
+  //     return res.render("icecream", icecreams[i]);
+  //   }
+  // }
+});
+
+app.get("/icecreams", function(req, res) {
+  res.render("index", { ics: icecreams });
+});
+
+
+
+
+// // handlebars 
+// *****
+
+
 db.sequelize.sync().then(function () {
   app.listen(PORT, function () {
     console.log("App listening on PORT " + PORT);
