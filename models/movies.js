@@ -7,7 +7,7 @@ module.exports = function (sequelize, DataTypes) {
   Movies.associate = function (models) {
     // Associating Movies with Posts
     // When an Movies is deleted, also delete any associated Posts
-    // change hasMany into belongsToMany swithch delete
+    // change hasMany into manyToMany swithch delete
     Movies.hasMany(models.Post, {
       onDelete: "cascade",
     });
