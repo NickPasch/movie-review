@@ -3,7 +3,11 @@
     "username": "root",
     "password": "password",
     "database": "movie_review",
+<<<<<<< HEAD
     "host": "localhost",
+=======
+    "host": "127.0.0.1",
+>>>>>>> develop
     "dialect": "mysql"
   },
   "test": {

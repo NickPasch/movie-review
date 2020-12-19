@@ -149,7 +149,7 @@ h4{
   
   }
       .sidebar {
-        width: 355px;
+        width: fit-content;
         height: fit-content;
         max-width: 300px;
         padding: 35px;
