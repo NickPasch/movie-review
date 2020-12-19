@@ -3,7 +3,7 @@
     "username": "root",
     "password": "password",
     "database": "movie_review",
-    "host": "17.0.0.1",
+    "host": "localhost",
     "dialect": "mysql"
   },
   "test": {
