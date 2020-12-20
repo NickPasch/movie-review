@@ -24,4 +24,6 @@ module.exports = function (sequelize, DataTypes) {
   });
   Movies.belongsToMany(Review, { through: MoviesReview });
   Review.belongsToMany(Movies, { through: MoviesReview });
+
+  return MoviesReview;
 };
