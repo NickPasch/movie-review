@@ -17,6 +17,11 @@ module.exports = function (sequelize, DataTypes) {
       type: DataTypes.STRING,
       allowNull: false,
     },
+    // The name can not be null (must contain data)
+    name: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
   });
   // Creating a custom method for our User model. This will check if an unhashed password entered by the user can be compared to the hashed password stored in our database
   User.prototype.validPassword = function (password) {
@@ -31,5 +36,13 @@ module.exports = function (sequelize, DataTypes) {
       null
     );
   });
+  // Associating User with Reviews
+  // When an User is deleted, also delete any associated Reviews
+  User.associate = function (models) {
+    User.belongsToMany(models.Movies, { throught: "" });
+    User.hasMany(models.Review, {
+      onDelete: "cascade",
+    });
+  };
   return User;
 };

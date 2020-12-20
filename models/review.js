@@ -1,6 +1,6 @@
 module.exports = function (sequelize, DataTypes) {
-  // We are creating Post model
-  var Post = sequelize.define("Post", {
+  // We are creating Review model
+  var Review = sequelize.define("Review", {
     title: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -14,15 +14,15 @@ module.exports = function (sequelize, DataTypes) {
       len: [1],
     },
   });
-  // We're saying that a Post should belong to an Movies
-  Post.associate = function (models) {
-    // A Post can't be created without an Movies due to the foreign key constraint
-    Post.belongsTo(models.Movies, {
+  // We're saying that a Review should belong to an User
+  Review.associate = function (models) {
+    // A Review can't be created without an User due to the foreign key constraint
+    Review.belongsTo(models.User, {
       foreignKey: {
         allowNull: false,
       },
     });
   };
 
-  return Post;
+  return Review;
 };
