@@ -29,7 +29,13 @@ module.exports = function(app) {
   });
 
   app.get("/movie_search", function(req, res) {
-    res.render(path.join("index"));
+    res.render("index");
+  });
+  app.get("/movie_list", function(req, res) {
+    res.render("movieInfo");
+  }); 
+  app.get("/movie_discussion", function(req, res) {
+    res.render("discussion");
   });
 
 };
