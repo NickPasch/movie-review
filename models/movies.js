@@ -1,3 +1,4 @@
+const Review = require("./review");
 module.exports = function (sequelize, DataTypes) {
   var Movies = sequelize.define("Movies", {
     // Giving the Movies model a name of type STRING

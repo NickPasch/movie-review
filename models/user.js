@@ -39,7 +39,7 @@ module.exports = function (sequelize, DataTypes) {
   // Associating User with Reviews
   // When an User is deleted, also delete any associated Reviews
   User.associate = function (models) {
-    User.belongsToMany(models.Movies, { throught: "" });
+    User.belongsToMany(models.Movies, { through: models.Review });
     User.hasMany(models.Review, {
       onDelete: "cascade",
     });
