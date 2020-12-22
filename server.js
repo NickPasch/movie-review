@@ -8,7 +8,7 @@ var exphbs = require("express-handlebars");
 var passport = require("./config/passport");
 
 // Setting up port and requiring models for syncing
-var PORT = process.env.PORT || 8081;
+var PORT = process.env.PORT || 8081;  
 var db = require("./models");
 
 // Creating express app and configuring middleware needed for authentication
