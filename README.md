@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-# movie-review
-=======
 # Movies Review
 
 ---
@@ -65,4 +62,3 @@ The wonderful world of open source has supported this project with the following
 
 This is licensed under MIT
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
->>>>>>> develop
