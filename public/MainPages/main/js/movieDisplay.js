@@ -8,7 +8,7 @@ $("#search-button").on("click", function (event) {
   // var url = $(this).data('target');
   // location.replace(url);
   $("#container1").attr("style","display: none;")
-  $("#hidden").attr("style","display: ;",)
+  $("#hidden").attr("style","display: ;")
   console.log("button clicked");
   //grab text from input box
   var searchTitle = $("#search-title").val().trim();
