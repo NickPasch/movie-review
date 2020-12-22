@@ -31,11 +31,7 @@ $(document).ready(function () {
       email: email,
       password: password
     })
-<<<<<<< HEAD
-      .then(function() {
-=======
       .then(function () {
->>>>>>> develop
         window.location.replace("/movie_search");
         // If there's an error, log the error
       })
