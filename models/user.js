@@ -18,10 +18,10 @@ module.exports = function (sequelize, DataTypes) {
       allowNull: false,
     },
     // The name can not be null (must contain data)
-    name: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
+    // name: {
+    //   type: DataTypes.STRING,
+    //   allowNull: false,
+    // },
   });
   // Creating a custom method for our User model. This will check if an unhashed password entered by the user can be compared to the hashed password stored in our database
   User.prototype.validPassword = function (password) {
