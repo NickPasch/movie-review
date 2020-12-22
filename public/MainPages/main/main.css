@@ -210,6 +210,21 @@ border-color: #666;
   color: rgb(255, 253, 253);
   
 }
+#rating{
+  margin-top: 8%;
+}
+#movieRate1{
+  font-size: 25px;
+  color: rgb(3, 3, 56);
+}
+#toEl{
+  color: rgb(138, 49, 49);
+  font-size: 20px;
+}
+#toEl2{
+  color:rgb(138, 49, 49);
+  font-size: 20px;
+}
 *****
 
 
