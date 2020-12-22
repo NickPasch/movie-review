@@ -26,12 +26,30 @@
     </div>
   </div>
 </nav>
-  <!-- End of navbar -->
+{{!-- Val Please fill this part  --}}
  <div class="container" id="hidden">
   <!--Added semantic HTML element "main" -->
   <main class="row">
     <div class="col-md-4" id="movieInfo">
-    </div>
+
+
+        
+
+        {{!-- Val Please fill this part  --}}
+<ul>
+  {{#each movie}}
+    <li>
+      <p>Member name: {{member}}</p>
+      <p>Movie title: {{title}}</p>
+      <p>review: {{review}}</p>
+    </li>
+  {{/each}}
+</ul>
+
+
+
+
+   </div>
   </main>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"

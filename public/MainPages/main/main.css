@@ -181,12 +181,21 @@ border: 5px;
 border-color: #666;
 
       }
-      /* #container{
-        background-color: rgba(38, 46, 24, 0.555);
-        background-image: url(./giphy.gif);
+      #container{
+        background-color: rgba(177, 182, 169, 0.507);
+        /* background-image: url(./giphy.gif); */
+        width: 100%;
+        height: 100%;
+      }
+      #hidden{
+        background-color: rgba(255, 255, 254, 0.466);
+        background-image: url(./snow.gif);
+        /* background-image: url(./lights.gif); */
+        backface-visibility: hidden;
+        background-size: cover;
         width: 100%;
         height: 162%;
-      } */
+      }
       .w-100{
         height: 25rem;
         width: 10rem;
@@ -200,6 +209,21 @@ border-color: #666;
 #white{
   color: rgb(255, 253, 253);
   
+}
+#rating{
+  margin-top: 8%;
+}
+#movieRate1{
+  font-size: 25px;
+  color: rgb(3, 3, 56);
+}
+#toEl{
+  color: rgb(138, 49, 49);
+  font-size: 20px;
+}
+#toEl2{
+  color:rgb(138, 49, 49);
+  font-size: 20px;
 }
 *****
 
