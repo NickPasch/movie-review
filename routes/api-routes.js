@@ -59,7 +59,31 @@ module.exports = function (app) {
         //res.json(data);
          res.json(movieData.data);
       }).catch(err => console.log(err))
+  });
+
+  app.get("/api/movie_search", function (req, res) {
+    var options = {
+      method: 'GET',
+      url: 'https://movies-tvshows-data-imdb.p.rapidapi.com/',
+      params: {type: 'get-boxoffice-movies', page: '1'},
+      headers: {
+        'x-rapidapi-key': '265b25ed9fmsh520fa44669f7ec7p1ec568jsn96a8204d2624',
+        'x-rapidapi-host': 'movies-tvshows-data-imdb.p.rapidapi.com'
+      }
+    };
+    
+    axios.request(options).then(function (response) {
+      console.log(response.data);
+    }).catch(function (error) {
+      console.error(error);
+    });
+  
   })
+
+
+  var axios = require("axios").default;
+
+
 };
 
 

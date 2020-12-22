@@ -1,2 +1,2 @@
-DROP DATABASE IF EXISTS movie_review;
-CREATE DATABASE movie_review;
+DROP DATABASE IF EXISTS passport_demo;
+CREATE DATABASE passport_demo;
