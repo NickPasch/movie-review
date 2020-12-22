@@ -18,15 +18,20 @@ var db        = {};
 //     config
 //   );
 // }
-if (process.env.JAWSDB_URL ){
-  var sequelize = new Sequelize(process.env.JAWSDB_URL);
+// if (process.env.JAWSDB_URL ){
+//   var sequelize = new Sequelize(process.env.JAWSDB_URL);
+// } else {
+//   var sequelize = new Sequelize(
+//     config.database,
+//     config.username,
+//     config.password,
+//     config
+//   );
+// }
+if (config.use_env_variable) {
+  var sequelize = new Sequelize(process.env[config.use_env_variable], config);
 } else {
-  var sequelize = new Sequelize(
-    config.database,
-    config.username,
-    config.password,
-    config
-  );
+  var sequelize = new Sequelize(config.database, config.username, config.password, config);
 }
 
 fs.readdirSync(__dirname)
