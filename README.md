@@ -50,7 +50,7 @@ The wonderful world of open source has supported this project with the following
 
 ## Contributors
 
-**Lili Huynh** - jQuerry, Ajax, Handlebars, Deployment
+**Lili Huynh** - Routes, API , Handlebars, Passport, Heroku
 
 **Nick Pasch** - Authentication, Passport, MVC Structure
 

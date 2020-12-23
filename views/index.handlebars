@@ -10,18 +10,20 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
       <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
-        <li class="nav-item">
-          <a class="nav-link" href="">{{member}}</a>
-        </li>
+         
         <li class="nav-item">
           <a class="nav-link" href="">Discussion</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="">Log out</a>
-        </li>
+       
         <li class="nav-item">
           <!-- about us page attach  -->
           <a class="nav-link" href="">About us</a>
+        </li>
+        <li class="nav-item">
+          <div class="nav-link" >Welcome, <span class="member-name"></span></div>
+        </li>
+         <li class="nav-item">
+          <a class="nav-link" href="/logout">Log out</a>
         </li>
       </ul>
     </div>
@@ -170,8 +172,9 @@
 <div class="container" id="hidden" style="display: none;">
   <br><br>
   <!--Added semantic HTML element "main" -->
+  <h3>Comments:</h3>
   <div class="form-floating">
-    <textarea class="form-control" placeholder="Leave your review about this movie..." id="floatingTextarea2"
+    <textarea class="form-control" placeholder="Leave your review about this movie here..." id="floatingTextarea2"
       style="height: 100px"></textarea>
     <br>
     {{!-- <button type="submit" class="btn btn-primary">Submit</button> --}}
@@ -191,12 +194,13 @@
       <b>
         <h6 id="movieRate1">------ Movie's rate ------</h6>
         <br>
-        <h6 id="toEl">Tomatometer: </h6><span class="fa fa-star checked"></span>
-        <h6>Total counts: </h6>
+        <h6 id="toEl">IMDB Rating: </h6>
+        <h6 id="imdbRate"></h6>
         <br>
-        <h6 id="toEl2">Audience Score: 
-        </h6><i class="far fa-comment-dots"></i>
-        <h6>Varified Ratings: </h6>
+        <h6 id="toEl2">IMDB Votes: </h6>
+        <i class="far fa-comment-dots"></i>
+        <h6 id="imdVotes"></h6>
+      
       </b>
     </div>
   </main>
@@ -216,3 +220,4 @@
   integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous">
   </script>
 <script src="/MainPages/main/js/movieDisplay.js"></script>
+ <script type="text/javascript" src="js/login.js"></script>

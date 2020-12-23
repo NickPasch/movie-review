@@ -48,7 +48,6 @@ function appendMovie(response) {
   );
   $("#movieInfo").append("<h6><b>Language: </b>" + response.Language + "</h6>");
   $("#movieInfo").append("<h6><b>Awards: </b>" + response.Awards + "</h6>");
-  $("#movieInfo").append(
-    "<h6><b>imdbRating: </b>" + response.imdbRating + "</h6>"
-  );
+  $("#imdbRate").append(response.imdbRating);
+  $("#imdVotes").append(response.imdbVotes);
 }
