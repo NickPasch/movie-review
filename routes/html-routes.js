@@ -3,6 +3,7 @@ var path = require("path");
 
 // Requiring our custom middleware for checking if a user is logged in
 var isAuthenticated = require("../config/middleware/isAuthenticated");
+const db = require("../models");
 
 module.exports = function(app) {
 
@@ -32,5 +33,38 @@ module.exports = function(app) {
     res.render(path.join("index"));
   });
 
-};
+  let array =[]
 
+  app.post("/discussion", function(req, res) {
+    db.Discussion.create({
+      body: req.body.discussion
+      }).then(function(){
+        res.render("discussion", {discussion: req.body.discussion});
+      })
+  //         try{
+  //     array.push({
+  //       discussion: req.body.discussion
+  //     })
+  //   }catch(e){
+  //     return e
+  //   }
+  //   console.log(array)
+  //   console.log()
+    // res.render("discussion");
+  });
+
+
+
+
+    // try{
+    //   array.push({
+    //     discussion: req.body.discussion
+    //   })
+    // }catch(e){
+    //   return e
+    // }
+    // console.log(array)
+    // console.log()
+    // res.render(path.join("discussion"));
+
+};

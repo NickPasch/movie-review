@@ -173,15 +173,20 @@
   <br><br>
   <!--Added semantic HTML element "main" -->
   <h3>Comments:</h3>
+  <form action="/discussion" method="POST">
   <div class="form-floating">
-    <textarea class="form-control" placeholder="Leave your review about this movie here..." id="floatingTextarea2"
-      style="height: 100px"></textarea>
+    <div>
+      <label for="discussion"></label>
+    <textarea class="form-control" placeholder="Leave your review about this movie here..." id="floatingTextarea2 discussion"
+      style="height: 100px" name="discussion"></textarea>
+    </div>
     <br>
     {{!-- <button type="submit" class="btn btn-primary">Submit</button> --}}
     <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-      <button class="btn btn-primary" type="button">Submit</button>
+      <button class="btn btn-primary" type="button submit">Submit</button>
     </div>
   </div>
+  </form>
   <main class="row">
     <div class="col-md-4" id="movieInfo">
     </div>
