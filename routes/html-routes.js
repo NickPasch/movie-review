@@ -39,7 +39,7 @@ module.exports = function(app) {
     db.Discussion.create({
       body: req.body.discussion
       }).then(function(){
-        res.render("discussion");
+        res.render("discussion", {discussion: req.body.discussion});
       })
   //         try{
   //     array.push({
