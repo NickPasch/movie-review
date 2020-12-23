@@ -31,6 +31,9 @@ module.exports = function(app) {
   app.get("/movie_search", function(req, res) {
     res.render(path.join("index"));
   });
+  app.post("/discussion", function(req, res) {
+    res.render(path.join("discussion"));
+  });
 
 };
 

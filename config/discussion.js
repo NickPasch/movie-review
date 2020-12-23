@@ -1,4 +1,6 @@
-module.exports = function (sequelize, DataTypes) {
+$("#submit-button").on("click", function (event) {
+  event.preventDefault();
+  module.exports = function (sequelize, DataTypes) {
     var Discussion = sequelize.define("Discussion", {
       title: {
         type: DataTypes.STRING,
@@ -25,3 +27,6 @@ module.exports = function (sequelize, DataTypes) {
     };
     return Discussion;
   };
+
+
+})
