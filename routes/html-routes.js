@@ -36,9 +36,26 @@ module.exports = function(app) {
   let array =[]
 
   app.post("/discussion", function(req, res) {
-    db.Discussion.create(req.body).then(function(dbDiscussion){
-      res.json(dbDiscussion);
-    });
+    db.Discussion.create({
+      body: req.body.discussion
+      }).then(function(){
+        res.render("discussion");
+      })
+  //         try{
+  //     array.push({
+  //       discussion: req.body.discussion
+  //     })
+  //   }catch(e){
+  //     return e
+  //   }
+  //   console.log(array)
+  //   console.log()
+    // res.render("discussion");
+  });
+
+
+
+
     // try{
     //   array.push({
     //     discussion: req.body.discussion
@@ -46,10 +63,9 @@ module.exports = function(app) {
     // }catch(e){
     //   return e
     // }
-    console.log(array)
+    // console.log(array)
     // console.log()
-    res.render(path.join("discussion"));
-  });
+    // res.render(path.join("discussion"));
 
 };
 
